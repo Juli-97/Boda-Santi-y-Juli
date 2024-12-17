@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Santi & Juli</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-image: url('file-K3TJPLZ4LgDKhqv4S6RB3P'); /* Reemplaza con la ruta de tu imagen */
+            background-size: cover;
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .countdown {
+            font-size: 2em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .details, .confirmation, .gift {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .details a, .gift a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nos casamos</h1>
+    <p>Santi & Juli - 15 de marzo de 2025</p>
+</header>
+
+<section>
+    <p>Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
+
+    <div class="countdown" id="countdown"></div>
+</section>
+
+<section class="details">
+    <h2>Detalles del Evento</h2>
+    <p><strong>Ceremonia Religiosa</strong></p>
+    <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
+    <a href="https://goo.gl/maps/Q7tJ9Us8t7X2" target="_blank">Ver en Google Maps</a>
+    <p><strong>Fiesta</strong></p>
+    <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
+    <a href="https://goo.gl/maps/naFWxrcfBaK2" target="_blank">Ver en Google Maps</a>
+</section>
+
+<section class="confirmation">
+    <h2>Confirmar Asistencia</h2>
+    <p>Por favor confirma tu asistencia al evento a través del siguiente enlace:</p>
+    <button onclick="window.location.href='https://forms.gle/xyz'">Confirmar Asistencia</button>
+</section>
+
+<section class="gift">
+    <h2>Si querés hacernos un regalo</h2>
+    <p>Podés hacerlo a través de nuestro CBU:</p>
+    <p><strong>Julieta Rocio Balbo</strong></p>
+    <p>CVU: 0000003100071390584838</p>
+    <p>Alias: Boda.Santi.Juli</p>
+    <p>CUIT/CUIL: 27-40417557-8</p>
+    <a href="https://www.mercadopago.com.ar" target="_blank"><button>Ver detalles del regalo</button></a>
+</section>
+
+<footer>
+    <p>&copy; 2024 Santi y Juli</p>
+</footer>
+
+<script>
+    // Cuenta regresiva
+    var weddingDate = new Date("March 15, 2025 19:00:00").getTime();
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = weddingDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
