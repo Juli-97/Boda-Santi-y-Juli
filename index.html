@@ -14,10 +14,12 @@
         }
         header {
             background-image: url('https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-95.jpg'); /* Corregido */
-            background-size: cover;
+            background-size: contain; /* Asegura que la imagen no se recorte */
+            background-position: center; /* Centra la imagen */
             text-align: center;
             padding: 80px 20px;
             color: white;
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
         }
         header h1 {
             font-size: 3em;
@@ -83,3 +85,27 @@
 
 <header>
     <h1>Nos casamos</h1>
+    <p>Santi & Juli - 15 de marzo de 2025</p>
+</header>
+
+<section>
+    <p>Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
+</section>
+
+<section>
+    <div id="countdown" class="countdown">
+        <!-- Código del contador de TickCounter -->
+        <script>(function(d, s, id) { 
+            var js, pjs = d.getElementsByTagName(s)[0]; 
+            if (d.getElementById(id)) return; 
+            js = d.createElement(s); js.id = id; 
+            js.src = "//www.tickcounter.com/static/js/loader.js"; 
+            pjs.parentNode.insertBefore(js, pjs); 
+        }(document, "script", "tickcounter-sdk"));</script>
+        <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Bo" href="//www.tickcounter.com/">Nuestra Bo</a>
+    </div>
+</section>
+
+<section class="details">
+    <h2>Detalles del Evento</h2>
+    <p><stro
