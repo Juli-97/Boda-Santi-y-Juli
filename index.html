@@ -112,7 +112,48 @@
     <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header'">Confirmar Asistencia</button>
 </section>
 
+<section class="value-info">
+    <h2>Valor de la tarjeta</h2>
+    <p><strong>Menores entre 0 y 4 años:</strong> NO PAGAN</p>
+    <p><strong>Menores entre 4 y 10 años:</strong> $27.500</p>
+    <p><strong>Mayores:</strong> $55.000</p>
+</section>
+
 <section class="gift">
     <h2>Si querés hacernos un regalo</h2>
     <p>Podés hacerlo a través de nuestro CBU:</p>
-    <p><strong>J
+    <p><strong>Julieta Rocio Balbo</strong></p>
+    <p>CVU: 0000003100071390584838</p>
+    <p>Alias: Boda.Santi.Juli</p>
+    <p>CUIT/CUIL: 27-40417557-8</p>
+    <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Foto Regalo" style="width: 100%; max-width: 500px; border-radius: 10px; margin-top: 20px;">
+    <a href="https://www.mercadopago.com.ar" target="_blank"><button>Ver detalles del regalo</button></a>
+</section>
+
+<footer>
+    <p>&copy; 2024 Santi y Juli</p>
+</footer>
+
+<script>
+    // Cuenta regresiva
+    var weddingDate = new Date("March 15, 2025 19:00:00").getTime();
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = weddingDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
