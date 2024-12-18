@@ -3,157 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda Santi & Juli</title>
+    <title>Invitación de Boda - Santi & Juli</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f7f7f7;
+            color: #333;
         }
-
         header {
-            background: url('./DSC-125.jpg') no-repeat center center;
+            background-image: url("https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-95.jpg");
             background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            background-position: center;
             text-align: center;
+            color: white;
+            padding: 100px 20px;
         }
-
         header h1 {
-            font-family: 'Times New Roman', serif;
-            font-size: 3.5em;
-            font-style: italic;
+            font-size: 3em;
             margin: 0;
         }
-
         header h2 {
-            font-family: 'Times New Roman', serif;
+            font-family: 'Dancing Script', cursive;
             font-size: 2.5em;
-            font-style: italic;
             margin: 10px 0;
         }
-
         header p {
-            font-size: 1.2em;
-            margin: 0;
+            font-size: 1.5em;
+            margin-top: 10px;
         }
-
         section {
             padding: 20px;
             text-align: center;
         }
-
-        section p {
-            font-family: Georgia, serif;
-            font-size: 1.1em;
-            line-height: 1.6;
+        section h2 {
+            font-size: 2em;
+            margin: 20px 0;
         }
-
-        .info {
+        .countdown {
+            font-size: 2em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .details, .gift, .confirmation {
+            background-color: #f1f1f1;
             padding: 20px;
-            background-color: #f4f4f4;
-            text-align: center;
+            margin: 20px 10px;
+            border-radius: 10px;
         }
-
-        .info h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
+        .details a, .gift a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
         }
-
-        .info p {
-            margin: 5px 0;
-        }
-
-        .gift {
-            padding: 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
         .gift img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
-
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
         footer {
-            background: #333;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 10px;
         }
-
         @media (max-width: 768px) {
-            header {
-                height: 70vh;
-                padding: 20px;
+            header h1, header h2, header p {
+                font-size: 1.5em;
             }
-
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header h2 {
-                font-size: 1.8em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            .info h3 {
-                font-size: 1.3em;
-            }
-
-            .info p {
-                font-size: 0.9em;
+            .details, .gift, .confirmation {
+                margin: 20px 5px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Nos casamos</h1>
-        <h2>Santi & Juli</h2>
-        <p>15.03.25</p>
-    </header>
 
-    <section>
-        <p>Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
-    </section>
+<header>
+    <h1>Nos casamos</h1>
+    <h2>Santi & Juli</h2>
+    <p>15.03.25</p>
+</header>
 
-    <section class="info">
-        <h3>Valor de la tarjeta</h3>
-        <p>Menores entre 0 y 4 años: NO PAGAN</p>
-        <p>Menores entre 4 y 10 años: $27.500</p>
-        <p>Mayores: $55.000</p>
-        <p>Enviar comprobante de pago vía WhatsApp</p>
-    </section>
+<section>
+    <p style="font-family: 'Dancing Script', cursive; font-size: 1.5em;">
+        Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
+    </p>
+    <div class="countdown">
+        <script>(function(d, s, id) { 
+            var js, pjs = d.getElementsByTagName(s)[0]; 
+            if (d.getElementById(id)) return; 
+            js = d.createElement(s); js.id = id; 
+            js.src = "//www.tickcounter.com/static/js/loader.js"; 
+            pjs.parentNode.insertBefore(js, pjs); 
+        }(document, "script", "tickcounter-sdk"));</script>
+        <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Boda" href="//www.tickcounter.com/">Contador de Tiempo</a>
+    </div>
+</section>
 
-    <section>
-        <h3>Confirmar asistencia</h3>
-        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header" target="_blank">Formulario de Confirmación</a></p>
-    </section>
+<section class="confirmation">
+    <h2>Confirmar Asistencia</h2>
+    <button onclick="window.location.href='https://forms.gle/xyz'">Confirmar Asistencia</button>
+</section>
 
-    <section class="gift">
-        <h3>Si querés hacernos un regalo</h3>
-        <img src="./DSC-125.jpg" alt="Foto de Santi y Juli">
-        <p>Podés hacerlo a través de nuestro CBU:</p>
-        <p><strong>Julieta Rocio Balbo</strong></p>
-        <p>CVU: 0000003100071390584838</p>
-        <p>Alias: Boda.Santi.Juli</p>
-        <p>CUIT/CUIL: 27-40417557-8</p>
-    </section>
+<section class="details">
+    <h2>Ubicación de la Boda</h2>
+    <p><strong>Ceremonia Religiosa</strong></p>
+    <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
+    <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
+    <p><strong>Fiesta</strong></p>
+    <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
+    <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Santi & Juli. Todos los derechos reservados.</p>
-    </footer>
+<section class="gift">
+    <h2>Si querés hacernos un regalo</h2>
+    <p><strong>Julieta Rocio Balbo</strong></p>
+    <p>CVU: 0000003100071390584838</p>
+    <p>Alias: Boda.Santi.Juli</p>
+    <p>CUIT/CUIL: 27-40417557-8</p>
+    <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Foto Regalo">
+</section>
+
+<footer>
+    <p>&copy; 2024 Santi y Juli</p>
+</footer>
+
 </body>
 </html>
-
