@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda - Santi & Juli</title>
-    <!-- Importando fuentes de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -15,28 +13,24 @@
             color: #333;
         }
         header {
-            background-image: url('https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-95.jpg');
+            background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-95.jpg');
             background-size: cover;
-            background-position: center;
-            height: 400px; /* Asegura que la imagen ocupe toda el área de encabezado */
             text-align: center;
             padding: 80px 20px;
             color: white;
         }
         header h1 {
-            font-size: 3em;
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
             margin: 0;
-            font-family: 'Dancing Script', cursive; /* Fuente cursiva romántica para el nombre */
         }
         header p {
             font-size: 1.5em;
             margin-top: 10px;
-            font-family: 'Great Vibes', cursive; /* Fuente cursiva clásica y legible para el mensaje */
         }
         section {
             padding: 20px;
             text-align: center;
-            font-family: 'Great Vibes', cursive; /* Cursiva para el texto de la sección */
         }
         .countdown {
             font-size: 2em;
@@ -66,15 +60,6 @@
         button:hover {
             background-color: #45a049;
         }
-        .gift img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            margin-top: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
         footer {
             background-color: #333;
             color: white;
@@ -84,18 +69,34 @@
             width: 100%;
             bottom: 0;
         }
+        /* Tipografías */
+        .romantic {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .classic-italic {
+            font-family: 'Georgia', serif;
+            font-size: 1.3em;
+            font-style: italic;
+        }
+        .arial {
+            font-family: 'Arial', sans-serif;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Nos casamos</h1>
+    <h1 class="romantic">Nos casamos</h1>
     <p>Santi & Juli - 15 de marzo de 2025</p>
 </header>
 
 <section>
-    <p>Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
+    <p class="classic-italic">Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
+</section>
 
+<section>
     <div class="countdown">
         <!-- Código del contador de TickCounter -->
         <script>(function(d, s, id) { 
@@ -106,25 +107,7 @@
             pjs.parentNode.insertBefore(js, pjs); 
         }(document, "script", "tickcounter-sdk"));</script>
         <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Bo" href="//www.tickcounter.com/">Nuestra Bo</a>
-        <p>15-03-2025</p> <!-- Fecha agregada -->
     </div>
-</section>
-
-<section class="gift">
-    <h2>Si querés hacernos un regalo</h2>
-    <p>Podés hacerlo a través de nuestro CBU:</p>
-    <p><strong>Julieta Rocio Balbo</strong></p>
-    <p>CVU: 0000003100071390584838</p>
-    <p>Alias: Boda.Santi.Juli</p>
-    <p>CUIT/CUIL: 27-40417557-8</p>
-    <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Foto Regalo">
-    <p><strong>Valor de la tarjeta:</strong></p>
-    <ul>
-        <li>Menores entre 0 y 4 años NO PAGAN</li>
-        <li>Menores entre 4 y 10 años valor: $27.500</li>
-        <li>Mayores $55.000</li>
-    </ul>
-    <p>Enviar comprobante de pago vía <a href="https://wa.me/numero" target="_blank">WhatsApp</a></p>
 </section>
 
 <section class="details">
@@ -137,10 +120,19 @@
     <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
 </section>
 
+<section class="gift">
+    <h2>Si querés hacernos un regalo</h2>
+    <p>Podés hacerlo a través de nuestro CBU:</p>
+    <p><strong>Julieta Rocio Balbo</strong></p>
+    <p>CVU: 0000003100071390584838</p>
+    <p>Alias: Boda.Santi.Juli</p>
+    <p>CUIT/CUIL: 27-40417557-8</p>
+</section>
+
 <section class="confirmation">
     <h2>Confirmar Asistencia</h2>
     <p>Por favor confirma tu asistencia al evento a través del siguiente enlace:</p>
-    <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header'">Confirmar Asistencia</button>
+    <button onclick="window.location.href='https://forms.gle/xyz'">Confirmar Asistencia</button>
 </section>
 
 <footer>
