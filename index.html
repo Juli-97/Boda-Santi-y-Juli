@@ -34,7 +34,7 @@
             background-image: url('https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/imagen%20floreada.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.1;
+            opacity: 0.4; /* Ajuste para que el fondo floral sea más visible */
             z-index: 1;
         }
 
@@ -89,37 +89,19 @@
 
         .countdown iframe {
             width: 100%;
-            height: 150px;
+            height: 100px;
             border: none;
             overflow: hidden;
         }
 
-        .countdown .iframe-container {
-            font-family: 'Dancing Script', cursive;
+        .countdown span {
             font-size: 2em;
-            color: #5D4037;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .details, .value-info, .confirmation, .gift {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .details h2, .value-info h2, .confirmation h2, .gift h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2em;
-            color: #5D4037;
+            font-family: 'Roboto', sans-serif;
+            color: #7D5A50;
         }
 
         .menu-boton {
-            padding: 15px 20px;
+            padding: 20px 30px;
             font-size: 1.2em;
             background-color: #A1887F;
             color: white;
@@ -189,13 +171,9 @@
                 Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
             </p>
         </section>
-    </div>
 
-    <div class="invitacion" id="invitacion">
         <section class="countdown">
-            <div class="iframe-container">
-                <iframe src="https://www.tickcounter.com/countdown/6316067"></iframe>
-            </div>
+            <span id="contador"></span>
         </section>
 
         <section class="details">
@@ -203,37 +181,13 @@
             <p><strong>Ceremonia Religiosa</strong></p>
             <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
             <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
-            <p><strong>Fiesta</strong></p>
-            <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
-            <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
-        </section>
-
-        <section>
-            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
-        </section>
-
-        <section>
-            <button class="menu-boton" onclick="mostrarMenu()">Conoce el Menú</button>
-            <div class="menu-popup" id="menu">
-                <h2>Conoce el Menú</h2>
-                <!-- Menú detallado -->
-                <button onclick="cerrarMenu()">Cerrar</button>
-            </div>
         </section>
     </div>
 
     <script>
         function mostrarInvitacion() {
             document.querySelector('.portada').style.display = 'none';
-            document.getElementById('invitacion').style.display = 'block';
-        }
-
-        function mostrarMenu() {
-            document.getElementById('menu').style.display = 'block';
-        }
-
-        function cerrarMenu() {
-            document.getElementById('menu').style.display = 'none';
+            document.getElementById('invitation').style.display = 'block';
         }
     </script>
 </body>
