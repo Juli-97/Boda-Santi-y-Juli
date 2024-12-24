@@ -1,210 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de Santi y Juli</title>
+    <title>Invitación de Boda</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #fdf5e6;
+            color: #5a5146;
+            text-align: center;
         }
-
-        .full-screen {
+        .card {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #faf8f6;
-            background-image: url('https://github.com/Juli-97/Boda-Santi-y-Juli/raw/main/DSC-95.jpg');
+            background: url('https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/over-image.png') no-repeat center center;
             background-size: cover;
-            background-position: center;
         }
-
-        .card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 15px;
+        .card-content {
             text-align: center;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-
         .card h1 {
-            font-family: 'Dancing Script', cursive;
-            color: olive;
-            font-size: 3em;
+            font-family: "Dancing Script", cursive;
+            color: #6b8e23;
+            font-size: 3rem;
+            margin: 0;
         }
-
-        .card .date {
-            font-family: 'Courier New', monospace;
-            color: sienna;
-            font-size: 1.5em;
+        .card p {
+            font-family: "Courier New", monospace;
+            font-size: 1.5rem;
+            color: #8b4513;
         }
-
-        .card .seal {
+        .card button {
             margin-top: 20px;
+            background-color: #e3e3d1;
+            border: none;
             padding: 10px 20px;
-            background-color: #6b705c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
+            font-size: 1rem;
+            color: #5a5146;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
         }
-
-        .card .seal:hover {
-            background-color: #4c5a3a;
+        .card button:hover {
+            background-color: #d2d2b8;
         }
-
         .section {
-            padding: 30px;
-            text-align: center;
+            padding: 50px 20px;
+            background-color: #fdf5e6;
         }
-
-        .olive-bg {
-            background-color: #f6f5ee;
-        }
-
         .section img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-        }
-
-        .details, .value-info, .confirmation, .gift {
-            margin-bottom: 30px;
-        }
-
-        .details a, .confirmation button {
-            display: block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #fff;
-            background-color: olive;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .details a:hover, .confirmation button:hover {
-            background-color: #556b2f;
-        }
-
-        .menu-button {
-            margin: 20px auto;
-            padding: 15px 30px;
-            background-color: #d4a373;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .menu-button:hover {
-            background-color: #c9a062;
-        }
-
-        .gift img {
-            margin-top: 20px;
             max-width: 100%;
             height: auto;
-            border-radius: 15px;
         }
-
+        .countdown {
+            margin: 20px auto;
+        }
+        .details a {
+            color: #6b8e23;
+            text-decoration: none;
+        }
+        .details a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            background-color: #d8dec5;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #5a5146;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #c0c7a6;
+        }
         footer {
-            text-align: center;
             padding: 20px;
-            background-color: #f8f5f2;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .card h1 {
-                font-size: 2.5em;
-            }
-
-            .card .date {
-                font-size: 1.2em;
-            }
+            background-color: #fdf5e6;
+            color: #5a5146;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-<!-- Full Screen Card -->
-<div class="full-screen">
-    <div class="card">
-        <h1>SANTI Y JULI</h1>
-        <p class="date">15.03.25</p>
-        <button class="seal" onclick="window.location.href='#invitation';">Entrar a la Invitación</button>
+<!-- Carta inicial -->
+<div class="card">
+    <div class="card-content">
+        <h1>SANTI & JULI</h1>
+        <p>15.03.25</p>
+        <button onclick="enterInvitation()">Entrar a la invitación</button>
     </div>
 </div>
 
-<!-- Invitation Section -->
-<section id="invitation" class="section olive-bg">
-    <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/raw/main/Sin%20t%C3%ADtulo.png" alt="Boda Santi y Juli">
-    <p style="font-family: 'Georgia', serif; font-size: 1.2em; color: #000;">
-        Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
-    </p>
-</section>
+<script>
+    function enterInvitation() {
+        document.querySelector('.card').style.display = 'none';
+        document.querySelector('.invitation').style.display = 'block';
+    }
+</script>
 
-<!-- Countdown -->
-<section class="section">
-    <div class="countdown">
-        <script>(function(d, s, id) { 
-            var js, pjs = d.getElementsByTagName(s)[0]; 
-            if (d.getElementById(id)) return; 
-            js = d.createElement(s); js.id = id; 
-            js.src = "//www.tickcounter.com/static/js/loader.js"; 
-            pjs.parentNode.insertBefore(js, pjs); 
-        }(document, "script", "tickcounter-sdk"));</script>
-        <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; width:100%; padding-bottom:25%; margin:0 auto;" href="//www.tickcounter.com/">Nuestra Boda</a>
-    </div>
-</section>
+<!-- Invitación -->
+<div class="invitation" style="display: none;">
 
-<!-- Details -->
-<section class="details">
-    <h2>Detalles del Evento</h2>
-    <p><strong>Ceremonia Religiosa</strong></p>
-    <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
-    <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
-    <p><strong>Fiesta</strong></p>
-    <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
-    <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
-</section>
+    <!-- Foto principal -->
+    <section>
+        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Foto principal">
+    </section>
 
-<!-- Menu -->
-<section class="section">
-    <button class="menu-button" onclick="alert('Mostrando Menú...')">Ver Menú</button>
-</section>
+    <!-- Mensaje emocionante -->
+    <section class="section">
+        <p>
+            Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos.<br>
+            Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía.<br>
+            Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
+        </p>
+    </section>
 
-<!-- Value Info -->
-<section class="value-info section olive-bg">
-    <h2>Valor de la Tarjeta</h2>
-    <p><strong>Menores entre 0 y 4 años:</strong> NO PAGAN</p>
-    <p><strong>Menores entre 4 y 10 años:</strong> $27.500</p>
-    <p><strong>Mayores:</strong> $55.000</p>
-</section>
+    <!-- Contador de tiempo -->
+    <section>
+        <div class="countdown">
+            <script>(function(d, s, id) { 
+                var js, pjs = d.getElementsByTagName(s)[0]; 
+                if (d.getElementById(id)) return; 
+                js = d.createElement(s); js.id = id; 
+                js.src = "//www.tickcounter.com/static/js/loader.js"; 
+                pjs.parentNode.insertBefore(js, pjs); 
+            }(document, "script", "tickcounter-sdk"));</script>
+            <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Boda" href="//www.tickcounter.com/">Nuestra Boda</a>
+        </div>
+    </section>
 
-<!-- Gift Section -->
-<section class="gift">
-    <h2>Si querés hacernos un regalo</h2>
-    <p><strong>Julieta Rocio Balbo</strong></p>
-    <p>CVU: 0000003100071390584838</p>
-    <p>Alias: Boda.Santi.Juli</p>
-    <p>CUIT/CUIL: 27-40417557-8</p>
-    <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/raw/main/DSC-125.jpg" alt="Regalo Imagen">
-</section>
+    <!-- Imagen -->
+    <section>
+        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Detalle del evento">
+    </section>
 
-<footer>
-    <p>&copy; 2024 Santi & Juli</p>
-</footer>
+    <!-- Detalles del evento -->
+    <section class="details">
+        <h2>Detalles del Evento</h2>
+        <p><strong>Ceremonia Religiosa</strong></p>
+        <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
+        <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
+        <p><strong>Fiesta</strong></p>
+        <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
+        <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
+    </section>
+
+    <!-- Confirmar asistencia -->
+    <section class="confirmation">
+        <h2>Confirmar Asistencia</h2>
+        <p>Por favor confirma tu asistencia al evento a través del siguiente enlace:</p>
+        <button class="button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header'">
+            Confirmar Asistencia
+        </button>
+    </section>
+
+    <!-- Si querés hacernos un regalo -->
+    <section class="gift">
+        <h2>Si querés hacernos un regalo</h2>
+        <p><strong>Julieta Rocio Balbo</strong></p>
+        <p>CVU: 0000003100071390584838</p>
+        <p>Alias: Boda.Santi.Juli</p>
+        <p>CUIT/CUIL: 27-40417557-8</p>
+        <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Regalo Imagen">
+    </section>
 
 </body>
 </html>
