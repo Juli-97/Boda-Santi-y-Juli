@@ -91,6 +91,11 @@
             margin-top: 20px;
         }
 
+        .countdown iframe {
+            display: block;
+            margin: 0 auto;
+        }
+
         .details, .value-info, .confirmation, .gift {
             padding: 20px;
             margin: 20px auto;
@@ -150,6 +155,12 @@
         .menu-popup button:hover {
             background-color: #8D6E63;
         }
+
+        .encabezado img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +168,21 @@
         <h2>Nos casamos</h2>
         <h1>Santi y Juli</h1>
         <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
+    </div>
+
+
+<div id="invitation" style="display: none;">
+        <section>
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli">
+        </section>
+        <section>
+            <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
+                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
+                Cada uno de ustedes forma parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. 
+                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
+            </p>
+        </section>
+        <!-- Más contenido aquí -->
     </div>
 
     <div class="invitacion" id="invitacion">
@@ -175,7 +201,7 @@
         </section>
 
         <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Encabezado">
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
         </section>
 
         <section>
