@@ -1,162 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Santi y Juli</title>
+    <title>Boda Santi y Juli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Georgia', serif;
-            background-color: #F5F4F2;
-            color: #4F4F4F;
+            font-family: 'Roboto', sans-serif;
+            background-color: #F9F5F1;
+            color: #5D4037;
         }
 
-        /* Estilos para la portada */
-        .cover {
+        .portada {
             position: relative;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #FFFFFF;
+            background: #FFFFFF;
             overflow: hidden;
         }
 
-        .cover h1 {
-            font-size: 3em;
+        .portada::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('fondo_flores.png'); /* Cambia esto al path de tus flores */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .portada h1 {
             font-family: 'Dancing Script', cursive;
-            color: #4F4F4F;
+            font-size: 3em;
+            z-index: 2;
             margin: 0;
         }
 
-        .cover h2 {
+        .portada h2 {
+            font-family: 'Roboto', sans-serif;
             font-size: 1.5em;
-            color: #4F4F4F;
-            margin-bottom: 1rem;
+            margin: 0;
+            z-index: 2;
+            color: #7D5A50;
         }
 
-        .cover button {
-            background-color: #BBAA92;
-            border: none;
-            border-radius: 50%;
-            padding: 20px;
-            font-size: 1em;
+        .boton-entrada {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
             color: #FFFFFF;
+            background-color: #A1887F;
+            border: none;
+            border-radius: 20px;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            z-index: 2;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        .cover button:hover {
+        .boton-entrada:hover {
             transform: scale(1.1);
+            background-color: #8D6E63;
         }
 
-        /* Animaciones sutiles de flores */
-        .flower {
-            position: absolute;
-            width: 100px;
-            opacity: 0;
-            animation: fadeInOut 8s infinite;
-        }
-
-        .flower:nth-child(1) {
-            top: 10%;
-            left: 20%;
-            animation-delay: 0s;
-        }
-
-        .flower:nth-child(2) {
-            top: 50%;
-            left: 80%;
-            animation-delay: 2s;
-        }
-
-        .flower:nth-child(3) {
-            top: 80%;
-            left: 30%;
-            animation-delay: 4s;
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* General */
-        .section {
-            padding: 2rem;
+        .invitacion {
+            display: none;
+            padding: 20px;
             text-align: center;
         }
 
-        .menu-button {
-            margin: 1rem auto;
-            display: block;
-            background-color: #E8DED1;
-            border: none;
-            border-radius: 8px;
-            padding: 1rem;
-            font-size: 1rem;
-            cursor: pointer;
+        .invitacion img {
+            max-width: 100%;
+            border-radius: 10px;
         }
 
-        .menu-content {
-            display: none;
-            text-align: left;
-            background-color: #FAF3E6;
-            padding: 1.5rem;
-            border-radius: 8px;
+        .invitacion section {
+            margin-top: 20px;
         }
 
-        .menu-content.active {
-            display: block;
+        .countdown {
+            margin-top: 20px;
         }
 
-        .value-info {
-            background-color: #EAE7DC;
-            color: #4F4F4F;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 1rem;
+        .details, .value-info, .confirmation, .gift {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        button {
-            background-color: #BBAA92;
+        .details h2, .value-info h2, .confirmation h2, .gift h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #5D4037;
+        }
+
+        .menu-boton {
+            padding: 10px 15px;
+            background-color: #A1887F;
             color: white;
-            padding: 0.5rem 1rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 15px;
             cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #9C8874;
         }
     </style>
 </head>
 <body>
-    <div class="cover">
-        <div>
-            <h2>Nos casamos</h2>
-            <h1>Santi y Juli</h1>
-            <p style="font-family: 'Courier New', monospace; color: #BBAA92;">15.03.25</p>
-            <button onclick="showInvitation()">Entrar</button>
-        </div>
-        <!-- Animaciones de flores -->
-        <img src="flower1.png" alt="Flor" class="flower">
-        <img src="flower2.png" alt="Flor" class="flower">
-        <img src="flower3.png" alt="Flor" class="flower">
+    <div class="portada">
+        <h2>Nos casamos</h2>
+        <h1>Santi y Juli</h1>
+        <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
     </div>
 
-    <div id="invitation" style="display: none;">
-        <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli">
-        </section>
+    <div class="invitacion" id="invitacion">
+        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/raw/main/Sin%20t%C3%ADtulo.png" alt="Santi y Juli">
+
         <section>
             <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
                 Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
@@ -164,18 +133,26 @@
                 Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
             </p>
         </section>
-        <!-- Más contenido aquí -->
+
+        <section class="countdown">
+            <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Boda" href="//www.tickcounter.com/">Nuestra Boda</a>
+        </section>
+
+        <section class="details">
+            <h2>Detalles del Evento</h2>
+            <p><strong>Ceremonia Religiosa</strong></p>
+            <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
+            <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
+            <p><strong>Fiesta</strong></p>
+            <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
+            <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
+        </section>
     </div>
 
     <script>
-        function showInvitation() {
-            document.querySelector('.cover').style.display = 'none';
-            document.getElementById('invitation').style.display = 'block';
-        }
-
-        function toggleMenu() {
-            const menu = document.querySelector('.menu-content');
-            menu.classList.toggle('active');
+        function mostrarInvitacion() {
+            document.querySelector('.portada').style.display = 'none';
+            document.getElementById('invitacion').style.display = 'block';
         }
     </script>
 </body>
