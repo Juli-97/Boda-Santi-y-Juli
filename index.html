@@ -3,123 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
+    <title>Boda Santi & Juli</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fdf5e6;
-            color: #5a5146;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f4f1;
+            color: #4a4a4a;
         }
-        .card {
+
+        .full-screen {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             height: 100vh;
-            background: url('https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/over-image.png') no-repeat center center;
-            background-size: cover;
-        }
-        .card-content {
+            background: url('https://example.com/sobre-elegante.jpg') no-repeat center center/cover;
             text-align: center;
         }
-        .card h1 {
-            font-family: "Dancing Script", cursive;
-            color: #6b8e23;
-            font-size: 3rem;
+
+        .full-screen h1 {
+            font-size: 3em;
+            font-style: italic;
+            color: #556b2f;
             margin: 0;
         }
-        .card p {
-            font-family: "Courier New", monospace;
-            font-size: 1.5rem;
+
+        .full-screen p {
+            font-size: 1.5em;
+            font-family: 'Courier New', Courier, monospace;
             color: #8b4513;
         }
-        .card button {
+
+        .button {
             margin-top: 20px;
-            background-color: #e3e3d1;
-            border: none;
             padding: 10px 20px;
-            font-size: 1rem;
-            color: #5a5146;
+            background-color: #e6e2d3;
+            color: #4a4a4a;
+            border: none;
             cursor: pointer;
+            font-size: 1em;
         }
-        .card button:hover {
-            background-color: #d2d2b8;
-        }
+
         .section {
-            padding: 50px 20px;
-            background-color: #fdf5e6;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
         }
+
         .section img {
             max-width: 100%;
             height: auto;
         }
-        .countdown {
-            margin: 20px auto;
+
+        .section h2 {
+            font-size: 2em;
+            color: #4a4a4a;
         }
-        .details a {
-            color: #6b8e23;
-            text-decoration: none;
+
+        .section p {
+            font-size: 1.2em;
         }
-        .details a:hover {
-            text-decoration: underline;
-        }
-        .button {
-            background-color: #d8dec5;
-            border: none;
+
+        .button-menu {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 20px;
-            font-size: 1rem;
-            color: #5a5146;
-            cursor: pointer;
+            background-color: #c5d3c0;
+            color: #4a4a4a;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        .button:hover {
-            background-color: #c0c7a6;
+
+        .gift img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
         }
+
         footer {
+            text-align: center;
             padding: 20px;
-            background-color: #fdf5e6;
-            color: #5a5146;
-            font-size: 0.9rem;
+            background-color: #f1e8e4;
+            color: #4a4a4a;
+        }
+
+        @media (max-width: 768px) {
+            .full-screen h1 {
+                font-size: 2em;
+            }
+
+            .full-screen p {
+                font-size: 1.2em;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- Carta inicial -->
-<div class="card">
-    <div class="card-content">
-        <h1>SANTI & JULI</h1>
+<!-- Pantalla inicial -->
+<div class="full-screen">
+    <div>
+        <h1>SANTI Y JULI</h1>
         <p>15.03.25</p>
-        <button onclick="enterInvitation()">Entrar a la invitación</button>
+        <button class="button" onclick="document.querySelector('.invitation').scrollIntoView({behavior: 'smooth'});">Entrar a la invitación</button>
     </div>
 </div>
 
-<script>
-    function enterInvitation() {
-        document.querySelector('.card').style.display = 'none';
-        document.querySelector('.invitation').style.display = 'block';
-    }
-</script>
-
 <!-- Invitación -->
-<div class="invitation" style="display: none;">
-
-    <!-- Foto principal -->
-    <section>
-        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Foto principal">
-    </section>
-
-    <!-- Mensaje emocionante -->
+<div class="invitation">
     <section class="section">
-        <p>
-            Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos.<br>
-            Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía.<br>
-            Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
-        </p>
+        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Portada">
     </section>
 
-    <!-- Contador de tiempo -->
-    <section>
+    <section class="section">
+        <p>Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
+    </section>
+
+    <section class="section">
         <div class="countdown">
             <script>(function(d, s, id) { 
                 var js, pjs = d.getElementsByTagName(s)[0]; 
@@ -132,33 +138,30 @@
         </div>
     </section>
 
-    <!-- Imagen -->
-    <section>
-        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Detalle del evento">
+    <section class="section">
+        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Imagen">
     </section>
 
-    <!-- Detalles del evento -->
-    <section class="details">
+    <section class="section details">
         <h2>Detalles del Evento</h2>
-        <p><strong>Ceremonia Religiosa</strong></p>
-        <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
+        <p><strong>Ceremonia Religiosa:</strong> Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
         <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
-        <p><strong>Fiesta</strong></p>
-        <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
+        <p><strong>Fiesta:</strong> Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
         <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
     </section>
 
-    <!-- Confirmar asistencia -->
-    <section class="confirmation">
+    <section class="section">
+        <a class="button-menu" onclick="alert('Aquí se muestra el menú elegante');">Ver Menú</a>
+    </section>
+
+    <section class="section confirmation">
         <h2>Confirmar Asistencia</h2>
-        <p>Por favor confirma tu asistencia al evento a través del siguiente enlace:</p>
-        <button class="button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header'">
+        <button class="button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header';">
             Confirmar Asistencia
         </button>
     </section>
 
-    <!-- Si querés hacernos un regalo -->
-    <section class="gift">
+    <section class="section gift">
         <h2>Si querés hacernos un regalo</h2>
         <p><strong>Julieta Rocio Balbo</strong></p>
         <p>CVU: 0000003100071390584838</p>
@@ -166,6 +169,7 @@
         <p>CUIT/CUIL: 27-40417557-8</p>
         <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Regalo Imagen">
     </section>
+</div>
 
 </body>
 </html>
