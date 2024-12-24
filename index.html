@@ -18,7 +18,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: url('https://example.com/sobre-elegante.jpg') no-repeat center center/cover;
+            background: url('https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png') no-repeat center center/cover;
             text-align: center;
         }
 
@@ -76,6 +76,24 @@
             border-radius: 5px;
         }
 
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f1e8e4;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4a4a4a;
+            font-size: 1em;
+        }
+
         .gift img {
             max-width: 100%;
             height: auto;
@@ -101,15 +119,27 @@
             .section h2 {
                 font-size: 1.5em;
             }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#detalles">Detalles del evento</a>
+    <a href="#confirmar">Confirmar asistencia</a>
+    <a href="#regalos">Regalos</a>
+</nav>
+
 <!-- Pantalla inicial -->
-<div class="full-screen">
+<div class="full-screen" id="inicio">
     <div>
-        <h1>SANTI Y JULI</h1>
+        <h1 style="font-family: 'Georgia', cursive;">SANTI Y JULI</h1>
         <p>15.03.25</p>
         <button class="button" onclick="document.querySelector('.invitation').scrollIntoView({behavior: 'smooth'});">Entrar a la invitación</button>
     </div>
@@ -142,7 +172,7 @@
         <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Imagen">
     </section>
 
-    <section class="section details">
+    <section class="section details" id="detalles">
         <h2>Detalles del Evento</h2>
         <p><strong>Ceremonia Religiosa:</strong> Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
         <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
@@ -150,26 +180,26 @@
         <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
     </section>
 
-    <section class="section">
-        <a class="button-menu" onclick="alert('Aquí se muestra el menú elegante');">Ver Menú</a>
-    </section>
-
-    <section class="section confirmation">
+    <section class="section" id="confirmar">
         <h2>Confirmar Asistencia</h2>
         <button class="button" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header';">
             Confirmar Asistencia
         </button>
     </section>
 
-    <section class="section gift">
+    <section class="section gift" id="regalos">
         <h2>Si querés hacernos un regalo</h2>
         <p><strong>Julieta Rocio Balbo</strong></p>
         <p>CVU: 0000003100071390584838</p>
         <p>Alias: Boda.Santi.Juli</p>
         <p>CUIT/CUIL: 27-40417557-8</p>
-        <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Regalo Imagen">
+        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-125.jpg" alt="Regalo Imagen">
     </section>
 </div>
+
+<footer>
+    <p>&copy; 2024 Santi & Juli</p>
+</footer>
 
 </body>
 </html>
