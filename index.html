@@ -3,174 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda Santi y Juli</title>
+    <title>Invitación Santi y Juli</title>
     <style>
         body {
             margin: 0;
             font-family: 'Georgia', serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #F5F4F2;
+            color: #4F4F4F;
         }
-        .full-screen {
+
+        /* Estilos para la portada */
+        .cover {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #e7dcc8;
-            text-align: center;
+            background-color: #FFFFFF;
+            overflow: hidden;
         }
-        .full-screen h1 {
+
+        .cover h1 {
+            font-size: 3em;
             font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
+            color: #4F4F4F;
             margin: 0;
-            color: #5a3921;
         }
-        .full-screen p {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            color: #8b5e3c;
+
+        .cover h2 {
+            font-size: 1.5em;
+            color: #4F4F4F;
+            margin-bottom: 1rem;
         }
-        .seal {
-            margin-top: 20px;
-            background-color: #5a3921;
-            color: white;
+
+        .cover button {
+            background-color: #BBAA92;
             border: none;
             border-radius: 50%;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-        .container {
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
+            font-size: 1em;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        .countdown {
-            margin: 40px 0;
+
+        .cover button:hover {
+            transform: scale(1.1);
         }
-        .details, .value-info, .confirmation, .gift {
-            margin: 40px 0;
+
+        /* Animaciones sutiles de flores */
+        .flower {
+            position: absolute;
+            width: 100px;
+            opacity: 0;
+            animation: fadeInOut 8s infinite;
         }
-        .details h2, .value-info h2, .confirmation h2, .gift h2 {
-            color: #5a3921;
+
+        .flower:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-child(2) {
+            top: 50%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-child(3) {
+            top: 80%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* General */
+        .section {
+            padding: 2rem;
             text-align: center;
         }
+
         .menu-button {
+            margin: 1rem auto;
             display: block;
-            background-color: #5a3921;
-            color: white;
-            padding: 10px;
-            text-align: center;
+            background-color: #E8DED1;
+            border: none;
+            border-radius: 8px;
+            padding: 1rem;
             font-size: 1rem;
             cursor: pointer;
-            margin: 20px auto;
-            width: 200px;
         }
-        .menu-modal {
+
+        .menu-content {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            overflow: auto;
+            text-align: left;
+            background-color: #FAF3E6;
+            padding: 1.5rem;
+            border-radius: 8px;
         }
-        .menu-modal .content {
-            background-color: #5a3921;
-            padding: 20px;
-            margin: 50px auto;
-            width: 90%;
-            max-width: 600px;
-        }
-        .menu-modal .close {
+
+        .menu-content.active {
             display: block;
-            text-align: right;
-            font-size: 1.5rem;
+        }
+
+        .value-info {
+            background-color: #EAE7DC;
+            color: #4F4F4F;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        button {
+            background-color: #BBAA92;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
-        .gift img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
+
+        button:hover {
+            background-color: #9C8874;
         }
     </style>
 </head>
 <body>
-
-<div class="full-screen">
-    <div>
-        <h1>SANTI Y JULI</h1>
-        <p>15.03.25</p>
-        <button class="seal" onclick="document.querySelector('.container').scrollIntoView({behavior: 'smooth'})">Entrar</button>
-    </div>
-</div>
-
-<div class="container">
-    <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png" alt="Foto" style="width: 100%;">
-    <section>
-        <p>Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
-        Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. 
-        Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.</p>
-    </section>
-
-    <section class="countdown">
-        <script>(function(d, s, id) { 
-            var js, pjs = d.getElementsByTagName(s)[0]; 
-            if (d.getElementById(id)) return; 
-            js = d.createElement(s); js.id = id; 
-            js.src = "//www.tickcounter.com/static/js/loader.js"; 
-            pjs.parentNode.insertBefore(js, pjs); 
-        }(document, "script", "tickcounter-sdk"));</script>
-        <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Boda" href="//www.tickcounter.com/">Nuestra Boda</a>
-    </section>
-
-    <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Encabezado" style="width: 100%;">
-
-    <section class="details">
-        <h2>Detalles del Evento</h2>
-        <p><strong>Ceremonia Religiosa</strong></p>
-        <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
-        <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
-        <p><strong>Fiesta</strong></p>
-        <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
-        <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
-    </section>
-
-    <div class="menu-button" onclick="document.querySelector('.menu-modal').style.display='block'">Menú</div>
-    <div class="menu-modal">
-        <div class="content">
-            <span class="close" onclick="document.querySelector('.menu-modal').style.display='none'">&times;</span>
-            <p>Entradas de recepción frías:...</p>
-            <!-- Continuar menú aquí -->
+    <div class="cover">
+        <div>
+            <h2>Nos casamos</h2>
+            <h1>Santi y Juli</h1>
+            <p style="font-family: 'Courier New', monospace; color: #BBAA92;">15.03.25</p>
+            <button onclick="showInvitation()">Entrar</button>
         </div>
+        <!-- Animaciones de flores -->
+        <img src="flower1.png" alt="Flor" class="flower">
+        <img src="flower2.png" alt="Flor" class="flower">
+        <img src="flower3.png" alt="Flor" class="flower">
     </div>
 
-    <section class="value-info" style="background-color: #e9f4e1; padding: 20px;">
-        <h2>Valor de la tarjeta</h2>
-        <p><strong>Menores entre 0 y 4 años:</strong> NO PAGAN</p>
-        <p><strong>Menores entre 4 y 10 años:</strong> $27.500</p>
-        <p><strong>Mayores:</strong> $55.000</p>
-    </section>
+    <div id="invitation" style="display: none;">
+        <section>
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli">
+        </section>
+        <section>
+            <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
+                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
+                Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. 
+                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
+            </p>
+        </section>
+        <!-- Más contenido aquí -->
+    </div>
 
-    <section class="confirmation">
-        <h2>Confirmar Asistencia</h2>
-        <p>Por favor confirma tu asistencia al evento a través del siguiente enlace:</p>
-        <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header'">
-            Confirmar Asistencia
-        </button>
-    </section>
+    <script>
+        function showInvitation() {
+            document.querySelector('.cover').style.display = 'none';
+            document.getElementById('invitation').style.display = 'block';
+        }
 
-    <section class="gift">
-        <h2>Si querés hacernos un regalo</h2>
-        <p><strong>Julieta Rocio Balbo</strong></p>
-        <p>CVU: 0000003100071390584838</p>
-        <p>Alias: Boda.Santi.Juli</p>
-        <p>CUIT/CUIL: 27-40417557-8</p>
-        <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Regalo Imagen">
-    </section>
-</div>
-
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-content');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
