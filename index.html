@@ -31,7 +31,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/imagen%20floreada.png'); /* Cambia esto al path de tus flores */
+            background-image: url('https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/imagen%20floreada.png');
             background-size: cover;
             background-position: center;
             opacity: 0.1;
@@ -87,13 +87,20 @@
             margin-top: 20px;
         }
 
-        .countdown {
-            margin-top: 20px;
+        .countdown iframe {
+            width: 100%;
+            height: 150px;
+            border: none;
+            overflow: hidden;
         }
 
-        .countdown iframe {
-            display: block;
-            margin: 0 auto;
+        .countdown .iframe-container {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #5D4037;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .details, .value-info, .confirmation, .gift {
@@ -112,7 +119,8 @@
         }
 
         .menu-boton {
-            padding: 10px 15px;
+            padding: 15px 20px;
+            font-size: 1.2em;
             background-color: #A1887F;
             color: white;
             border: none;
@@ -170,10 +178,9 @@
         <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
     </div>
 
-
-<div id="invitation" style="display: none;">
+    <div id="invitation" style="display: none;">
         <section>
-            <img src="" alt="Foto de Santi y Juli">
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-95.jpg" alt="Foto de Santi y Juli">
         </section>
         <section>
             <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
@@ -182,12 +189,13 @@
                 Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
             </p>
         </section>
-        <!-- Más contenido aquí -->
     </div>
 
     <div class="invitacion" id="invitacion">
         <section class="countdown">
-            <iframe src="https://www.tickcounter.com/countdown/6316067" style="width:100%;height:150px;border:none;overflow:hidden;"></iframe>
+            <div class="iframe-container">
+                <iframe src="https://www.tickcounter.com/countdown/6316067"></iframe>
+            </div>
         </section>
 
         <section class="details">
@@ -201,68 +209,16 @@
         </section>
 
         <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
         </section>
 
         <section>
-            <button class="menu-boton" onclick="mostrarMenu()">Menú</button>
+            <button class="menu-boton" onclick="mostrarMenu()">Conoce el Menú</button>
             <div class="menu-popup" id="menu">
-                <h2>Menú</h2>
-                <h3>Entradas de recepción frías:</h3>
-                <ul>
-                    <li>Variedades de canapés y tartaletitas</li>
-                    <li>Pinchos de jamón crudo, queso azul y cherry</li>
-                    <li>Pinchos de pancetta ahumada, queso gruyere</li>
-                    <li>Brusquetas de crema de remolacha y aceitunas negras</li>
-                    <li>Brusquetas de campo con rúcula, oliva, aceitunas negras y cherry</li>
-                    <li>Sándwich de miga (pan blanco, pan negro y roquefort)</li>
-                    <li>Variedad de arrolladitos de fiambres y quesos</li>
-                    <li>Pebetitos de jamón cocido y queso con mayonesa casera</li>
-                </ul>
-                <h3>Entradas de recepción calientes:</h3>
-                <ul>
-                    <li>Casuelitas de ñoquis a los 4 quesos</li>
-                    <li>Crocantes de chinchulines a la provenzal</li>
-                </ul>
-                <h3>Nos sentamos en la mesa:</h3>
-                <ul>
-                    <li>Empanaditas de copetín al disco</li>
-                    <li>Dos tablas de fiambres artesanales por mesa</li>
-                </ul>
-                <h3>Plato principal:</h3>
-                <p>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera cortada ancha, vacío y matambre, acompañado por ensaladas y papas fritas.</p>
-                <h3>Postre:</h3>
-                <p>Brownie con bocha de helado</p>
-                <h3>Platos de madrugada:</h3>
-                <ul>
-                    <li>Pizza libre a la parrilla (variedades fugazzeta, napolitana, 4 quesos y especial)</li>
-                    <li>Mini panchos con aderezos</li>
-                    <li>Pata flambeada</li>
-                </ul>
+                <h2>Conoce el Menú</h2>
+                <!-- Menú detallado -->
                 <button onclick="cerrarMenu()">Cerrar</button>
             </div>
-        </section>
-
-        <section class="value-info">
-            <h2>Valor de la tarjeta</h2>
-            <p><strong>Menores entre 0 y 4 años:</strong> NO PAGAN</p>
-            <p><strong>Menores entre 4 y 10 años:</strong> $27.500</p>
-            <p><strong>Mayores:</strong> $55.000</p>
-        </section>
-
-        <section class="confirmation">
-            <h2>Confirmación de asistencia</h2>
-            <p><a href="https://forms.gle/SnurVmHXrHsrxYET6" target="_blank">Confirma tu asistencia aquí</a></p>
-            <p style="font-style: italic; color: #7D5A50;">Recuerda abonar tu tarjeta y enviar el comprobate a +54 9 3574408373</p>
-        </section>
-
-        <section class="gift">
-            <h2>Si querés hacernos un regalo</h2>
-            <p><strong>Julieta Rocio Balbo</strong></p>
-            <p>CVU: 0000003100071390584838</p>
-            <p>Alias: Boda.Santi.Juli</p>
-            <p>CUIT/CUIL: 27-40417557-8</p>
-            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Regalo Imagen">
         </section>
     </div>
 
