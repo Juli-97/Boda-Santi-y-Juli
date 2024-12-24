@@ -36,12 +36,6 @@
             background-position: center;
             opacity: 0.1;
             z-index: 1;
-            animation: fadeIn 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0.1; }
-            100% { opacity: 0.2; }
         }
 
         .portada h1 {
@@ -120,6 +114,42 @@
             border-radius: 15px;
             cursor: pointer;
         }
+
+        .menu-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            z-index: 10;
+            overflow-y: auto;
+            max-height: 80%;
+        }
+
+        .menu-popup h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #5D4037;
+        }
+
+        .menu-popup button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #A1887F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .menu-popup button:hover {
+            background-color: #8D6E63;
+        }
     </style>
 </head>
 <body>
@@ -130,18 +160,8 @@
     </div>
 
     <div class="invitacion" id="invitacion">
-        <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/raw/main/Sin%20t%C3%ADtulo.png" alt="Santi y Juli">
-
-        <section>
-            <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
-                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
-                Cada uno de ustedes ha sido parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. 
-                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
-            </p>
-        </section>
-
         <section class="countdown">
-            <a data-type="countdown" data-id="6316067" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto;" title="Nuestra Boda" href="//www.tickcounter.com/">Nuestra Boda</a>
+            <iframe src="https://www.tickcounter.com/countdown/6316067" style="width:100%;height:150px;border:none;overflow:hidden;"></iframe>
         </section>
 
         <section class="details">
@@ -154,19 +174,69 @@
             <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
         </section>
 
+        <section>
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Encabezado">
+        </section>
+
+        <section>
+            <button class="menu-boton" onclick="mostrarMenu()">Menú</button>
+            <div class="menu-popup" id="menu">
+                <h2>Menú</h2>
+                <h3>Entradas de recepción frías:</h3>
+                <ul>
+                    <li>Variedades de canapés y tartaletitas</li>
+                    <li>Pinchos de jamón crudo, queso azul y cherry</li>
+                    <li>Pinchos de pancetta ahumada, queso gruyere</li>
+                    <li>Brusquetas de crema de remolacha y aceitunas negras</li>
+                    <li>Brusquetas de campo con rúcula, oliva, aceitunas negras y cherry</li>
+                    <li>Sándwich de miga (pan blanco, pan negro y roquefort)</li>
+                    <li>Variedad de arrolladitos de fiambres y quesos</li>
+                    <li>Pebetitos de jamón cocido y queso con mayonesa casera</li>
+                </ul>
+                <h3>Entradas de recepción calientes:</h3>
+                <ul>
+                    <li>Casuelitas de ñoquis a los 4 quesos</li>
+                    <li>Crocantes de chinchulines a la provenzal</li>
+                </ul>
+                <h3>Nos sentamos en la mesa:</h3>
+                <ul>
+                    <li>Empanaditas de copetín al disco</li>
+                    <li>Dos tablas de fiambres artesanales por mesa</li>
+                </ul>
+                <h3>Plato principal:</h3>
+                <p>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera cortada ancha, vacío y matambre, acompañado por ensaladas y papas fritas.</p>
+                <h3>Postre:</h3>
+                <p>Brownie con bocha de helado</p>
+                <h3>Platos de madrugada:</h3>
+                <ul>
+                    <li>Pizza libre a la parrilla (variedades fugazzeta, napolitana, 4 quesos y especial)</li>
+                    <li>Mini panchos con aderezos</li>
+                    <li>Pata flambeada</li>
+                </ul>
+                <button onclick="cerrarMenu()">Cerrar</button>
+            </div>
+        </section>
+
         <section class="value-info">
-            <h2>Valor de la Tarjeta</h2>
-            <p>El valor de la tarjeta es de $XX. Podrás realizar el pago mediante transferencia bancaria o en efectivo el día del evento.</p>
+            <h2>Valor de la tarjeta</h2>
+            <p><strong>Menores entre 0 y 4 años:</strong> NO PAGAN</p>
+            <p><strong>Menores entre 4 y 10 años:</strong> $27.500</p>
+            <p><strong>Mayores:</strong> $55.000</p>
         </section>
 
         <section class="confirmation">
-            <h2>Confirmación de Asistencia</h2>
-            <p>Por favor, confirma tu asistencia antes del <strong>XX de XXXX</strong>. Contáctanos al WhatsApp <a href="https://wa.me/XXXXXXXXXX">+54 9 XX XXXX XXXX</a>.</p>
+            <h2>Confirmación de asistencia</h2>
+            <p><a href="https://forms.gle/SnurVmHXrHsrxYET6" target="_blank">Confirma tu asistencia aquí</a></p>
+            <p style="font-style: italic; color: #7D5A50;">Recuerda abonar tu tarjeta</p>
         </section>
 
         <section class="gift">
-            <h2>Lista de Regalos</h2>
-            <p>Tu presencia es nuestro mejor regalo. Si deseas ayudarnos a comenzar esta nueva etapa, puedes colaborar con nuestra lista de regalos en <a href="https://www.regalos.com">www.regalos.com</a>.</p>
+            <h2>Si querés hacernos un regalo</h2>
+            <p><strong>Julieta Rocio Balbo</strong></p>
+            <p>CVU: 0000003100071390584838</p>
+            <p>Alias: Boda.Santi.Juli</p>
+            <p>CUIT/CUIL: 27-40417557-8</p>
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-125.jpg" alt="Regalo Imagen">
         </section>
     </div>
 
@@ -174,6 +244,14 @@
         function mostrarInvitacion() {
             document.querySelector('.portada').style.display = 'none';
             document.getElementById('invitacion').style.display = 'block';
+        }
+
+        function mostrarMenu() {
+            document.getElementById('menu').style.display = 'block';
+        }
+
+        function cerrarMenu() {
+            document.getElementById('menu').style.display = 'none';
         }
     </script>
 </body>
