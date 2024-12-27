@@ -14,23 +14,15 @@
             font-family: 'Roboto', sans-serif;
             background-color: #F9F5F1;
             color: #5D4037;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         .portada {
             position: relative;
-            width: 100%;
-            max-width: 1200px;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
             background: #FFFFFF;
             overflow: hidden;
         }
@@ -45,7 +37,7 @@
             background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/floral%203%20.png?raw=true);
             background-size: cover;
             background-position: center;
-            opacity: 1;
+            opacity: 1; /* Fondo al 100% */
             z-index: 1;
         }
 
@@ -67,10 +59,11 @@
 
         .portada .nombres {
             font-family: 'Dancing Script', cursive;
-            font-size: 4em;
+            font-size: 4em; /* Tamaño aumentado */
+            font-style: italic;
             z-index: 2;
             margin: 20px 0 30px 0;
-            color: #B8860B;
+            color: #B8860B; /* Dorado opaco */
         }
 
         .boton-entrada {
@@ -79,7 +72,7 @@
             align-items: center;
             width: 120px;
             height: 100px;
-            background-color: #D8A7B1;
+            background-color: #D8A7B1; /* Rosa viejo */
             color: white;
             font-family: 'Roboto', sans-serif;
             font-size: 1em;
@@ -95,44 +88,6 @@
         .boton-entrada:hover {
             transform: scale(1.1);
             background-color: #C48B9F;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .portada h2 {
-                font-size: 2.5em;
-            }
-
-            .portada .nombres {
-                font-size: 3em;
-            }
-
-            .boton-entrada {
-                width: 100px;
-                height: 80px;
-                font-size: 0.9em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .portada h2 {
-                font-size: 2em;
-            }
-
-            .portada .nombres {
-                font-size: 2.5em;
-            }
-
-            .boton-entrada {
-                width: 80px;
-                height: 70px;
-                font-size: 0.8em;
-            }
         }
     </style>
 </head>
@@ -191,6 +146,7 @@
 
         <section class="details">
             <h2>Detalles del Evento</h2>
+            <p>15 de Marzo 2025<p>
             <p><strong>Ceremonia Religiosa</strong></p>
             <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
             <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
@@ -260,7 +216,7 @@
 
         <section class="confirmation">
             <h2>Confirmar Asistencia</h2>
-            <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de febrero de 2025.</p>
+            <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de MARZO de 2025.</p>
             <p>Escríbenos a: <strong>Juli</strong> 3574408373 o <strong>Santi</strong> 3574418250.</p>
             <p>Si requieres menú especial (Celiaco, vegetariano, vegano, etc.) háznoslo saber.</p>
         </section>
