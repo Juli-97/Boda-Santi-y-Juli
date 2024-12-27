@@ -37,7 +37,7 @@
             background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/floral%203%20.png?raw=true);
             background-size: cover;
             background-position: center;
-            opacity: 0.1;
+            opacity: 0.9;
             z-index: 1;
         }
 
@@ -86,6 +86,7 @@
             justify-content: center;
             align-items: center;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .countdown-item {
@@ -188,6 +189,61 @@
             display: block;
             visibility: visible;
             color: #8D6E63;
+        }
+
+        @media (max-width: 768px) {
+            .portada h1 {
+                font-size: 2.5em;
+            }
+
+            .portada h2 {
+                font-size: 1.2em;
+            }
+
+            .boton-entrada {
+                font-size: 1.2em;
+                padding: 10px 20px;
+            }
+
+            .countdown-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .countdown-item {
+                text-align: center;
+            }
+
+            .countdown-separator {
+                display: none;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .countdown-label {
+                font-size: 0.8rem;
+            }
+
+            .details,
+            .value-info,
+            .confirmation,
+            .gift {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .foto-ajustada {
+                max-width: 90%;
+            }
+
+            .menu-boton {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
