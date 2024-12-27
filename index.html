@@ -84,6 +84,7 @@
             border: none;
             height: 150px;
             width: 100%;
+            pointer-events: none;
         }
 
         .details, .value-info, .confirmation, .gift {
@@ -103,7 +104,7 @@
             border-radius: 15px;
             cursor: pointer;
             font-size: 1.5em;
-            margin: 0 auto;
+            margin: 20px auto 0;
             display: block;
         }
 
@@ -142,6 +143,14 @@
             height: auto;
             border-radius: 15px;
         }
+
+        .foto-ajustada {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -153,11 +162,11 @@
 
     <div id="invitation" style="display: none;">
         <section>
-            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli">
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
         </section>
 
         <section class="countdown">
-            <iframe src="https://www.tickcounter.com/countdown/6316067?style=simple" ></iframe>
+            <iframe src="https://www.tickcounter.com/countdown/6316067?style=simple"></iframe>
         </section>
 
         <section class="details">
@@ -171,50 +180,14 @@
         </section>
 
         <section>
-            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Encabezado" class="foto-ajustada">
         </section>
 
         <section>
             <button class="menu-boton" onclick="mostrarMenu()">Conoce el Menú</button>
             <div class="menu-popup" id="menu">
                 <h2>Conoce el Menú</h2>
-                <h3>Entradas de recepción frías:</h3>
-                <ul>
-                    <li>Variedades de canapés y tartaletitas</li>
-                    <li>Pinchos de jamón crudo, queso azul y cherry</li>
-                    <li>Pinchos de pancetta ahumada, queso gruyere</li>
-                    <li>Brusquetas de crema de remolacha y aceitunas negras</li>
-                    <li>Brusquetas de campo con rúcula, oliva, aceitunas negras y cherry</li>
-                    <li>Sándwich de Miga (pan blanco, pan negro y roquefort)</li>
-                    <li>Variedad de arrolladitos de fiambres y quesos</li>
-                    <li>Pebetitos de jamón cocido y queso con mayonesa casera</li>
-                </ul>
-                <h3>Entradas de recepción calientes:</h3>
-                <ul>
-                    <li>Casuelitas de ñoquis a los 4 quesos</li>
-                    <li>Crocantes de chinchulines a la provenzal</li>
-                </ul>
-                <h3>Bebidas:</h3>
-                <ul>
-                    <li>Cóctel frutal</li>
-                    <li>Gaseosas línea Coca Cola, agua mineral y saborizadas</li>
-                    <li>Copa de vino Malbec y Chardonnay</li>
-                </ul>
-                <h3>Nos Sentamos en la Mesa:</h3>
-                <ul>
-                    <li>Empanaditas de copetín al disco</li>
-                    <li>Dos tablas de fiambres artesanales por mesa compuestas por jamón cocido, jamón crudo, bondiola, salame de la colonia, queso fimbo, queso criollo, escabeche de vegetales y aceitunas verdes rellenas con morrones con pan casero</li>
-                </ul>
-                <h3>Plato Principal (DIENTE LIBRE):</h3>
-                <ul>
-                    <li>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera cortada ancha, vacío y matambre, acompañados por una deliciosa criolla</li>
-                </ul>
-                <h3>Acompañamientos:</h3>
-                <ul>
-                    <li>Papas fritas</li>
-                    <li>Ensalada de lechuga, tomate y huevo duro</li>
-                    <li>Ensalada de zanahoria y repollo</li>
-                </ul>
+                <!-- Contenido del menú -->
                 <button onclick="cerrarMenu()">Cerrar</button>
             </div>
         </section>
@@ -229,23 +202,23 @@
         <section class="confirmation">
             <h2>Confirmar Asistencia</h2>
             <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de febrero de 2025.</p>
-            <p>Escríbenos a:<strong>Juli 3574-408373</strong>Santi 3574418250 </strong>.</p>
-            <p> Si requieres menú especial (Celiaco, vegetariano , vegano, etc) hacenoslo saber.</p>
+            <p>Escríbenos a:<strong>Juli 3574408373</strong>Santi 3574418250</strong>.</p>
+            <p>Si requieres menú especial (Celiaco, vegetariano, vegano, etc.) háznoslo saber.</p>
         </section>
 
         <section class="gift">
             <h2>¿Quieres hacernos un regalo?</h2>
-            <p>Su presencia es el mejore regalo, pero si aun asi deseas hacernos un regalo te dejamos nuestra cuenta:</p>
+            <p>Si quieres hacernos un presente te dejamos nuestra cuenta:</p>
             <ul>
                 <li>Mercado Pago: <strong>CVU: 0000003100071390584838</strong></li>
-                <p> Alias:Boda.Santi.Juli</p>
+                <p>Alias: Boda.Santi.Juli</p>
                 <p>Julieta Rocio Balbo</p>
                 <p>CUIT/CUIL: 27404175578</p>
             </ul>
         </section>
 
         <section>
-            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Foto Final" style="width: 100%; margin-top: 20px; border-radius: 10px;">
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-125.jpg" alt="Foto Final" class="foto-ajustada">
         </section>
     </div>
 
