@@ -1,1 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Santi y Juli</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #F9F5F1;
+            color: #5D4037;
+        }
+
+        .portada {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF;
+            overflow: hidden;
+        }
+
+        .portada::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/floral%203%20.png?raw=true);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.100;
+            z-index: 1;
+        }
+
+        .portada h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            z-index: 2;
+            margin: 0;
+        }
+
+        .portada h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5em;
+            margin: 0;
+            z-index: 2;
+            color: #7D5A50;
+        }
+
+        .boton-entrada {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #A1887F;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 2;
+            transition: transform 0.3s, background-color 0.3s;
+            text-align: center;
+        }
+
+        .boton-entrada:hover {
+            transform: scale(1.1);
+            background-color: #8D6E63;
+        }
+
+        .invitacion img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #5D4037;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .countdown-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #5D4037;
+            letter-spacing: 0.1rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .countdown-separator {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #5D4037;
+        }
+
+        .details,
+        .value-info,
+        .confirmation,
+        .gift {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-boton {
+            padding: 15px 30px;
+            background-color: #A1887F;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+            margin: 20px auto 0;
+            display: block;
+        }
+
+        .menu-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            z-index: 10;
+            overflow-y: auto;
+            max-height: 80%;
+        }
+
+        .menu-popup button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #A1887F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .menu-popup button:hover {
+            background-color: #8D6E63;
+        }
+
+        .encabezado img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .foto-ajustada {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            display: block;
+            visibility: visible;
+            color: #8D6E63;
+        }
+
+        @media (max-width: 768px) {
+            .portada h1 {
+                font-size: 2.5em;
+            }
+
+            .portada h2 {
+                font-size: 1.2em;
+            }
+
+            .boton-entrada {
+                font-size: 1.2em;
+                padding: 10px 20px;
+            }
+
+            .countdown-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .countdown-item {
+                text-align: center;
+            }
+
+            .countdown-separator {
+                display: none;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .countdown-label {
+                font-size: 0.8rem;
+            }
+
+            .details,
+            .value-info,
+            .confirmation,
+            .gift {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .foto-ajustada {
+                max-width: 90%;
+            }
+
+            .menu-boton {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="portada">
+         <h2>Nos casamos</h2>
+        <div class="fecha">15 de Marzo 2025</div>
+        <div class="nombres">Santi y Juli</div>
+        <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
+    </div>
+
+    <div id="invitation" style="display: none;">
+        <section>
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png"
+                alt="Foto de Santi y Juli" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        </section>
+        <section
+            style="font-family: 'Roboto', sans-serif; font-size: 1.2em; line-height: 1.6; margin-bottom: 2rem; text-align: center; max-width: 750px; margin: 0 auto;">
+            <p>
+                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos.
+                Cada uno de ustedes forma parte importante de nuestras vidas, y no podríamos imaginar este momento sin
+                su compañía.
+            </p>
+            <p>
+                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y
+                recuerdos que atesoraremos para siempre.
+            </p>
+        </section>
+        <section style="text-align: center; margin: 2rem 0; font-size: 1.3em">
+            <p>¡El gran día ha llegado!</p>
+        </section>
+        <section class="countdown" style="text-align: center; margin: 2rem 0;">
+            <div id="custom-countdown" class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">0</span>
+                    <p class="countdown-label">DÍAS</p>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">0</span>
+                    <p class="countdown-label">HORAS</p>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">0</span>
+                    <p class="countdown-label">MINUTOS</p>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">0</span>
+                    <p class="countdown-label">SEGUNDOS</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="details">
+            <h2>Detalles del Evento</h2>
+            <p><strong>Ceremonia Religiosa</strong></p>
+            <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
+            <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
+            <p><strong>Fiesta</strong></p>
+            <p>Salón de fiestas La Coqueta, Monte Cristo - 21:00 hs</p>
+            <a href="https://maps.app.goo.gl/omMoRPh2duGHPBFL9" target="_blank">Ver en Google Maps</a>
+        </section>
+
+        <section>
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg?raw=true" alt="Foto 1"
+                class="foto-ajustada">
+        </section>
+
+        <section>
+            <button class="menu-boton" onclick="mostrarMenu()">Conoce el Menú</button>
+            <div class="menu-popup" id="menu">
+                <h2>Conoce el Menú</h2>
+                <h3>Entradas de recepción frías:</h3>
+                <ul>
+                    <li>Variedades de canapés y tartaletitas</li>
+                    <li>Pinchos de jamón crudo, queso azul y cherry</li>
+                    <li>Pinchos de pancetta ahumada, queso gruyere</li>
+                    <li>Brusquetas de crema de remolacha y aceitunas negras</li>
+                    <li>Brusquetas de campo con rúcula, oliva, aceitunas negras y cherry</li>
+                    <li>Sándwich de Miga (pan blanco, pan negro y roquefort)</li>
+                    <li>Variedad de arrolladitos de fiambres y quesos</li>
+                    <li>Pebetitos de jamón cocido y queso con mayonesa casera</li>
+                </ul>
+                <h3>Entradas de recepción calientes:</h3>
+                <ul>
+                    <li>Casuelitas de ñoquis a los 4 quesos</li>
+                    <li>Crocantes de chinchulines a la provenzal</li>
+                </ul>
+                <h3>Bebidas:</h3>
+                <ul>
+                    <li>Cóctel frutal</li>
+                    <li>Gaseosas línea Coca Cola, agua mineral y saborizadas</li>
+                    <li>Copa de vino Malbec y Chardonnay</li>
+                </ul>
+                <h3>Nos Sentamos en la Mesa:</h3>
+                <ul>
+                    <li>Empanaditas de copetín al disco</li>
+                    <li>Dos tablas de fiambres artesanales por mesa compuestas por jamón cocido, jamón crudo, bondiola,
+                        salame de la colonia, queso fimbo, queso criollo, escabeche de vegetales y aceitunas verdes
+                        rellenas con morrones con pan casero</li>
+                </ul>
+                <h3>Plato Principal (DIENTE LIBRE):</h3>
+                <ul>
+                    <li>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera
+                        cortada ancha, vacío y matambre, acompañados por una deliciosa criolla</li>
+                </ul>
+                <h3>Acompañamientos:</h3>
+                <ul>
+                    <li>Papas fritas</li>
+                    <li>Ensalada de lechuga, tomate y huevo duro</li>
+                    <li>Ensalada de zanahoria y repollo</li>
+                    <button onclick="cerrarMenu()">Cerrar</button>
+            </div>
+        </section>
+
+        <section class="value-info">
+            <h2>Valores de la tarjeta</h2>
+            <p>Niños entre 0 y 4 años: Sin costo.</p>
+            <p>Niños entre 5 y 10 años: $27.500.</p>
+            <p>Adultos: $55.000.</p>
+        </section>
+
+        <section class="confirmation">
+            <h2>Confirmar Asistencia</h2>
+            <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de Marzo de 2025.</p>
+            <p>Escríbenos a: <strong>Juli</strong> 3574408373 o <strong>Santi</strong> 3574418250.</p>
+            <p>Si requieres menú especial (Celiaco, vegetariano, vegano, etc.) háznoslo saber.</p>
+        </section>
+
+        <section class="gift">
+            <h2>¿Quieres hacernos un regalo?</h2>
+            <p>Si quieres hacernos un presente te dejamos nuestra cuenta:</p>
+            <ul>
+                <li>Mercado Pago: <strong>CVU: 0000003100071390584838</strong></li>
+                <p>Alias: Boda.Santi.Juli</p>
+                <p>Julieta Rocio Balbo</p>
+                <p>CUIT/CUIL: 27404175578</p>
+            </ul>
+        </section>
+
+        <section>
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-125.jpg?raw=true" alt="Foto 2"
+                class="foto-ajustada">
+        </section>
+    </div>
+
+    <script>
+        function mostrarInvitacion() {
+            document.querySelector('.portada').style.display = 'none';
+            document.getElementById('invitation').style.display = 'block';
+        }
+
+        function mostrarMenu() {
+            document.getElementById('menu').style.display = 'block';
+        }
+
+        function cerrarMenu() {
+            document.getElementById('menu').style.display = 'none';
+        }
+
+        function updateCountdown(targetDate) {
+            const now = new Date();
+            const timeDifference = targetDate - now;
+
+            if (timeDifference <= 0) {
+                document.getElementById('custom-countdown').innerHTML = '<p>¡El gran día ha llegado!</p>';
+                return;
+            }
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        const weddingDate = new Date('2025-03-15T19:00:00'); // Fecha y hora del evento
+        setInterval(() => updateCountdown(weddingDate), 1000);
+    </script>
+</body>
+
+</html>
