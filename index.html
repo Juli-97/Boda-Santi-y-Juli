@@ -63,17 +63,23 @@
             font-style: italic;
             z-index: 2;
             margin: 10px 0 30px 0;
-            color: #5D4037;
+            color: gold; /* Color dorado */
         }
 
         .boton-entrada {
-            width: 60px;
-            height: 60px;
-            background-color: #A1887F;
-            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 100px;
+            background-color: #D8A7B1; /* Rosa viejo */
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
             border: none;
-            border-radius: 50%;
-            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 80%, 18% 100%, 0% 38%);
+            clip-path: polygon(50% 0%, 90% 30%, 100% 60%, 80% 100%, 50% 80%, 20% 100%, 0% 60%, 10% 30%);
             cursor: pointer;
             z-index: 2;
             transition: transform 0.3s, background-color 0.3s;
@@ -81,7 +87,7 @@
 
         .boton-entrada:hover {
             transform: scale(1.1);
-            background-color: #8D6E63;
+            background-color: #C48B9F;
         }
     </style>
 </head>
@@ -91,7 +97,7 @@
         <h2>Nos casamos</h2>
         <div class="fecha">15 de Marzo 2025</div>
         <div class="nombres">Santi y Juli</div>
-        <button class="boton-entrada" onclick="mostrarInvitacion()"></button>
+        <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
     </div>
 
     <script>
