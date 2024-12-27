@@ -14,15 +14,23 @@
             font-family: 'Roboto', sans-serif;
             background-color: #F9F5F1;
             color: #5D4037;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .portada {
             position: relative;
+            width: 100%;
+            max-width: 1200px;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             background: #FFFFFF;
             overflow: hidden;
         }
@@ -37,7 +45,7 @@
             background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/floral%203%20.png?raw=true);
             background-size: cover;
             background-position: center;
-            opacity: 1; /* Fondo al 100% */
+            opacity: 1;
             z-index: 1;
         }
 
@@ -59,11 +67,10 @@
 
         .portada .nombres {
             font-family: 'Dancing Script', cursive;
-            font-size: 4em; /* Tamaño aumentado */
-            font-style: italic;
+            font-size: 4em;
             z-index: 2;
             margin: 20px 0 30px 0;
-            color: #B8860B; /* Dorado opaco */
+            color: #B8860B;
         }
 
         .boton-entrada {
@@ -71,15 +78,15 @@
             justify-content: center;
             align-items: center;
             width: 120px;
-            height: 110px;
-            background-color: #D8A7B1; /* Rosa viejo */
+            height: 100px;
+            background-color: #D8A7B1;
             color: white;
             font-family: 'Roboto', sans-serif;
             font-size: 1em;
             font-weight: bold;
             text-align: center;
             border: none;
-            clip-path: path("M50 0C61.09 0 72.18 4.55 80 12.36C87.82 20.18 92.36 31.27 92.36 42.36C92.36 60.91 79.09 75.45 60.55 92.36L50 100L39.45 92.36C20.91 75.45 7.64 60.91 7.64 42.36C7.64 31.27 12.18 20.18 20 12.36C27.82 4.55 38.91 0 50 0Z");
+            clip-path: polygon(50% 100%, 90% 70%, 100% 40%, 80% 0%, 50% 20%, 20% 0%, 0% 40%, 10% 70%);
             cursor: pointer;
             z-index: 2;
             transition: transform 0.3s, background-color 0.3s;
@@ -88,6 +95,44 @@
         .boton-entrada:hover {
             transform: scale(1.1);
             background-color: #C48B9F;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .portada h2 {
+                font-size: 2.5em;
+            }
+
+            .portada .nombres {
+                font-size: 3em;
+            }
+
+            .boton-entrada {
+                width: 100px;
+                height: 80px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portada h2 {
+                font-size: 2em;
+            }
+
+            .portada .nombres {
+                font-size: 2.5em;
+            }
+
+            .boton-entrada {
+                width: 80px;
+                height: 70px;
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
@@ -100,41 +145,17 @@
         <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
     </div>
 
-    <script>
-        function mostrarInvitacion() {
-            alert('¡Bienvenidos a nuestra boda!');
-        }
-    </script>
-</body>
     <div id="invitation" style="display: none;">
         <section>
             <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png"
-                alt="Foto de Santi y Juli" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                alt="Foto de Santi y Juli">
         </section>
-       <section
-    style="
-        font-family: 'Georgia', serif;
-        font-size: 1.3em;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-        text-align: center;
-        max-width: 750px;
-        margin: 0 auto;
-        color: #6b4f4f;
-        background-color: #fdf6f0;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    ">
-    <p style="font-style: italic;">
-        Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos.  
-        Cada uno de ustedes forma parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía.
-    </p>
-    <p style="font-style: italic;">
-        Los invitamos a celebrar el amor, la familia y la amistad.  
-        Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
-    </p>
-</section>
+        <section>
+            <p>
+                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos.
+                Cada uno de ustedes forma parte importante de nuestras vidas.
+            </p>
+        </section>
         <section style="text-align: center; margin: 2rem 0; font-size: 1.3em">
             <p>¡El gran día ha llegado!</p>
         </section>
@@ -164,7 +185,6 @@
 
         <section class="details">
             <h2>Detalles del Evento</h2>
-             <p>15 de Marzo 2025</p>
             <p><strong>Ceremonia Religiosa</strong></p>
             <p>Iglesia de Monte Cristo, Córdoba - 19:00 hs</p>
             <a href="https://maps.app.goo.gl/nNUPFwtMfaDtGWPQ7" target="_blank">Ver en Google Maps</a>
@@ -180,7 +200,7 @@
 
         <section>
             <button class="menu-boton" onclick="mostrarMenu()">Conoce el Menú</button>
-            <div class="menu-popup" id="menu">
+            <div class="menu-popup" id="menu" style="display: none;">
                 <h2>Conoce el Menú</h2>
                 <h3>Entradas de recepción frías:</h3>
                 <ul>
@@ -221,7 +241,8 @@
                     <li>Papas fritas</li>
                     <li>Ensalada de lechuga, tomate y huevo duro</li>
                     <li>Ensalada de zanahoria y repollo</li>
-                    <button onclick="cerrarMenu()">Cerrar</button>
+                </ul>
+                <button onclick="cerrarMenu()">Cerrar</button>
             </div>
         </section>
 
@@ -234,7 +255,7 @@
 
         <section class="confirmation">
             <h2>Confirmar Asistencia</h2>
-            <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de Marzo de 2025.</p>
+            <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de MARZO de 2025.</p>
             <p>Escríbenos a: <strong>Juli</strong> 3574408373 o <strong>Santi</strong> 3574418250.</p>
             <p>Si requieres menú especial (Celiaco, vegetariano, vegano, etc.) háznoslo saber.</p>
         </section>
