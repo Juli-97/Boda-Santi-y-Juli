@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Santi y Juli</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -78,16 +81,44 @@
             border-radius: 10px;
         }
 
-        .countdown iframe {
-            display: block;
-            margin: 0 auto;
-            border: none;
-            height: 150px;
-            width: 100%;
-            pointer-events: none;
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
         }
 
-        .details, .value-info, .confirmation, .gift {
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #5D4037;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .countdown-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #5D4037;
+            letter-spacing: 0.1rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .countdown-separator {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #5D4037;
+        }
+
+        .details,
+        .value-info,
+        .confirmation,
+        .gift {
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
@@ -150,9 +181,17 @@
             max-width: 80%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            display: block;
+            visibility: visible;
+            color: #8D6E63;
         }
     </style>
 </head>
+
 <body>
     <div class="portada">
         <h2>Nos casamos</h2>
@@ -161,18 +200,47 @@
     </div>
 
     <div id="invitation" style="display: none;">
-      <section>
-            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-        </section>
         <section>
-            <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
-                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
-                Cada uno de ustedes forma parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. 
-                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png"
+                alt="Foto de Santi y Juli" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        </section>
+        <section
+            style="font-family: 'Roboto', sans-serif; font-size: 1.2em; line-height: 1.6; margin-bottom: 2rem; text-align: center; max-width: 750px; margin: 0 auto;">
+            <p>
+                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos.
+                Cada uno de ustedes forma parte importante de nuestras vidas, y no podríamos imaginar este momento sin
+                su compañía.
+            </p>
+            <p>
+                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y
+                recuerdos que atesoraremos para siempre.
             </p>
         </section>
-        <section class="countdown">
-          <iframe width="694" height="357" src="https://w2.countingdownto.com/5962857" frameborder="0"></iframe>
+        <section style="text-align: center; margin: 2rem 0; font-size: 1.3em">
+            <p>¡El gran día ha llegado!</p>
+        </section>
+        <section class="countdown" style="text-align: center; margin: 2rem 0;">
+            <div id="custom-countdown" class="countdown-container">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">0</span>
+                    <p class="countdown-label">DÍAS</p>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">0</span>
+                    <p class="countdown-label">HORAS</p>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">0</span>
+                    <p class="countdown-label">MINUTOS</p>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">0</span>
+                    <p class="countdown-label">SEGUNDOS</p>
+                </div>
+            </div>
         </section>
 
         <section class="details">
@@ -186,7 +254,8 @@
         </section>
 
         <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg?raw=true" alt="Foto 1" class="foto-ajustada">
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg?raw=true" alt="Foto 1"
+                class="foto-ajustada">
         </section>
 
         <section>
@@ -218,32 +287,35 @@
                 <h3>Nos Sentamos en la Mesa:</h3>
                 <ul>
                     <li>Empanaditas de copetín al disco</li>
-                    <li>Dos tablas de fiambres artesanales por mesa compuestas por jamón cocido, jamón crudo, bondiola, salame de la colonia, queso fimbo, queso criollo, escabeche de vegetales y aceitunas verdes rellenas con morrones con pan casero</li>
+                    <li>Dos tablas de fiambres artesanales por mesa compuestas por jamón cocido, jamón crudo, bondiola,
+                        salame de la colonia, queso fimbo, queso criollo, escabeche de vegetales y aceitunas verdes
+                        rellenas con morrones con pan casero</li>
                 </ul>
                 <h3>Plato Principal (DIENTE LIBRE):</h3>
                 <ul>
-                    <li>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera cortada ancha, vacío y matambre, acompañados por una deliciosa criolla</li>
+                    <li>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera
+                        cortada ancha, vacío y matambre, acompañados por una deliciosa criolla</li>
                 </ul>
                 <h3>Acompañamientos:</h3>
                 <ul>
                     <li>Papas fritas</li>
                     <li>Ensalada de lechuga, tomate y huevo duro</li>
                     <li>Ensalada de zanahoria y repollo</li>
-                <button onclick="cerrarMenu()">Cerrar</button>
+                    <button onclick="cerrarMenu()">Cerrar</button>
             </div>
         </section>
 
         <section class="value-info">
             <h2>Valores de la tarjeta</h2>
-            <p>Niños entre 0 y 4 años, Sin costo.</p>
-            <p>Niños entre 5 y 10 años, $27.500.</p>
-            <p>Adultos, $55.000.</p>
+            <p>Niños entre 0 y 4 años: Sin costo.</p>
+            <p>Niños entre 5 y 10 años: $27.500.</p>
+            <p>Adultos: $55.000.</p>
         </section>
 
         <section class="confirmation">
             <h2>Confirmar Asistencia</h2>
             <p>Por favor, confirma tu asistencia enviado el comprobante de pago antes del 5 de febrero de 2025.</p>
-            <p>Escríbenos a:<strong>Juli 3574408373</strong>Santi 3574418250</strong>.</p>
+            <p>Escríbenos a: <strong>Juli</strong> 3574408373 o <strong>Santi</strong> 3574418250.</p>
             <p>Si requieres menú especial (Celiaco, vegetariano, vegano, etc.) háznoslo saber.</p>
         </section>
 
@@ -258,8 +330,9 @@
             </ul>
         </section>
 
-       <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-125.jpg?raw=true" alt="Foto 2" class="foto-ajustada">
+        <section>
+            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-125.jpg?raw=true" alt="Foto 2"
+                class="foto-ajustada">
         </section>
     </div>
 
@@ -276,6 +349,30 @@
         function cerrarMenu() {
             document.getElementById('menu').style.display = 'none';
         }
+
+        function updateCountdown(targetDate) {
+            const now = new Date();
+            const timeDifference = targetDate - now;
+
+            if (timeDifference <= 0) {
+                document.getElementById('custom-countdown').innerHTML = '<p>¡El gran día ha llegado!</p>';
+                return;
+            }
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        const weddingDate = new Date('2025-03-15T19:00:00'); // Fecha y hora del evento
+        setInterval(() => updateCountdown(weddingDate), 1000);
     </script>
 </body>
+
 </html>
