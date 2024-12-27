@@ -41,32 +41,19 @@
             z-index: 1;
         }
 
-        .portada h2 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 2.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin: 0;
-            position: relative;
-            top: -50px;
-            z-index: 2;
-            color: #5D4037;
-        }
-
-        .portada h3 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.5em;
-            margin: 10px 0;
-            z-index: 2;
-            color: #7D5A50;
-        }
-
         .portada h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 4em; /* Tamaño incrementado */
-            color: #D4AF37; /* Dorado opaco */
+            font-size: 3em;
             z-index: 2;
             margin: 0;
+        }
+
+        .portada h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5em;
+            margin: 0;
+            z-index: 2;
+            color: #7D5A50;
         }
 
         .boton-entrada {
@@ -88,13 +75,185 @@
             transform: scale(1.1);
             background-color: #8D6E63;
         }
+
+        .invitacion img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #5D4037;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .countdown-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #5D4037;
+            letter-spacing: 0.1rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .countdown-separator {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #5D4037;
+        }
+
+        .details,
+        .value-info,
+        .confirmation,
+        .gift {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-boton {
+            padding: 15px 30px;
+            background-color: #A1887F;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+            margin: 20px auto 0;
+            display: block;
+        }
+
+        .menu-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            z-index: 10;
+            overflow-y: auto;
+            max-height: 80%;
+        }
+
+        .menu-popup button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #A1887F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .menu-popup button:hover {
+            background-color: #8D6E63;
+        }
+
+        .encabezado img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .foto-ajustada {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            display: block;
+            visibility: visible;
+            color: #8D6E63;
+        }
+
+        @media (max-width: 768px) {
+            .portada h1 {
+                font-size: 2.5em;
+            }
+
+            .portada h2 {
+                font-size: 1.2em;
+            }
+
+            .boton-entrada {
+                font-size: 1.2em;
+                padding: 10px 20px;
+            }
+
+            .countdown-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .countdown-item {
+                text-align: center;
+            }
+
+            .countdown-separator {
+                display: none;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .countdown-label {
+                font-size: 0.8rem;
+            }
+
+            .details,
+            .value-info,
+            .confirmation,
+            .gift {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .foto-ajustada {
+                max-width: 90%;
+            }
+
+            .menu-boton {
+                font-size: 1.3em;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="portada">
-        <h2>Nos casamos</h2>
-        <h3>15 de Marzo 2025</h3>
+         <h2>Nos casamos</h2>
+        
+        <h4>15 De Marzo 2025</h4>
+        
         <h1>Santi y Juli</h1>
         <button class="boton-entrada" onclick="mostrarInvitacion()">Entrar</button>
     </div>
