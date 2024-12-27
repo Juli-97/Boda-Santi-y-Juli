@@ -31,10 +31,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/imagen%20floreada.png); 
+            background-image: url(https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/imagen%20floreada.png);
             background-size: cover;
             background-position: center;
-            opacity: 0.05; /* Se reduce la opacidad para que se vea más el fondo floral */
+            opacity: 0.5;
             z-index: 1;
         }
 
@@ -55,8 +55,8 @@
 
         .boton-entrada {
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2em;
+            padding: 15px 30px;
+            font-size: 1.5em;
             font-weight: bold;
             color: #FFFFFF;
             background-color: #A1887F;
@@ -65,6 +65,7 @@
             cursor: pointer;
             z-index: 2;
             transition: transform 0.3s, background-color 0.3s;
+            text-align: center;
         }
 
         .boton-entrada:hover {
@@ -72,28 +73,17 @@
             background-color: #8D6E63;
         }
 
-        .invitacion {
-            display: none;
-            padding: 20px;
-            text-align: center;
-        }
-
         .invitacion img {
             max-width: 100%;
             border-radius: 10px;
         }
 
-        .invitacion section {
-            margin-top: 20px;
-        }
-
-        .countdown {
-            margin-top: 20px;
-        }
-
         .countdown iframe {
             display: block;
             margin: 0 auto;
+            border: none;
+            height: 150px;
+            width: 100%;
         }
 
         .details, .value-info, .confirmation, .gift {
@@ -105,19 +95,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .details h2, .value-info h2, .confirmation h2, .gift h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2em;
-            color: #5D4037;
-        }
-
         .menu-boton {
-            padding: 10px 15px;
+            padding: 15px 30px;
             background-color: #A1887F;
             color: white;
             border: none;
             border-radius: 15px;
             cursor: pointer;
+            font-size: 1.5em;
+            margin: 0 auto;
+            display: block;
         }
 
         .menu-popup {
@@ -134,12 +121,6 @@
             z-index: 10;
             overflow-y: auto;
             max-height: 80%;
-        }
-
-        .menu-popup h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2em;
-            color: #5D4037;
         }
 
         .menu-popup button {
@@ -159,21 +140,7 @@
         .encabezado img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-        }
-
-        .confirmation button {
-            padding: 15px 30px;
-            background-color: #A1887F;
-            color: white;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .confirmation button:hover {
-            background-color: #8D6E63;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -186,18 +153,11 @@
 
     <div id="invitation" style="display: none;">
         <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli">
-        </section>
-        <section>
-            <p style="font-family: 'Georgia', serif; font-size: 1.2em;">
-                Estamos muy emocionados de compartir este día tan especial con nuestros seres más queridos. 
-                Cada uno de ustedes forma parte importante de nuestras vidas, y no podríamos imaginar este momento sin su compañía. 
-                Los invitamos a celebrar el amor, la familia y la amistad. Será un día lleno de risas, emociones y recuerdos que atesoraremos para siempre.
-            </p>
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/Sin%20t%C3%ADtulo.png" alt="Foto de Santi y Juli">
         </section>
 
         <section class="countdown">
-            <iframe src="https://www.tickcounter.com/countdown/6316067" style="width:100%;height:150px;border:none;overflow:hidden;"></iframe>
+            <iframe src="https://www.tickcounter.com/countdown/6316067?style=simple" ></iframe>
         </section>
 
         <section class="details">
@@ -211,7 +171,7 @@
         </section>
 
         <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Encabezado" style="width: 80%; margin: 0 auto; display: block; border-radius: 15px;">
         </section>
 
         <section>
@@ -225,29 +185,35 @@
                     <li>Pinchos de pancetta ahumada, queso gruyere</li>
                     <li>Brusquetas de crema de remolacha y aceitunas negras</li>
                     <li>Brusquetas de campo con rúcula, oliva, aceitunas negras y cherry</li>
-                    <li>Sándwich de miga (pan blanco, pan negro y roquefort)</li>
+                    <li>Sándwich de Miga (pan blanco, pan negro y roquefort)</li>
                     <li>Variedad de arrolladitos de fiambres y quesos</li>
                     <li>Pebetitos de jamón cocido y queso con mayonesa casera</li>
                 </ul>
-                <h3>Entradas de recepción calientes:</h3>
+                <h3>Entradas de recepción calientes (todas incluidas):</h3>
                 <ul>
                     <li>Casuelitas de ñoquis a los 4 quesos</li>
                     <li>Crocantes de chinchulines a la provenzal</li>
                 </ul>
-                <h3>Nos sentamos en la mesa:</h3>
+                <h3>Bebidas:</h3>
+                <ul>
+                    <li>Cóctel frutal</li>
+                    <li>Gaseosas línea Coca Cola, agua mineral y saborizadas</li>
+                    <li>Copa de vino Malbec y Chardonnay</li>
+                </ul>
+                <h3>Nos Sentamos en la Mesa:</h3>
                 <ul>
                     <li>Empanaditas de copetín al disco</li>
-                    <li>Dos tablas de fiambres artesanales por mesa</li>
+                    <li>Dos tablas de fiambres artesanales por mesa compuestas por jamón cocido, jamón crudo, bondiola, salame de la colonia, queso fimbo, queso criollo, escabeche de vegetales y aceitunas verdes rellenas con morrones con pan casero</li>
                 </ul>
-                <h3>Plato principal:</h3>
-                <p>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera cortada ancha, vacío y matambre, acompañado por ensaladas y papas fritas.</p>
-                <h3>Postre:</h3>
-                <p>Brownie con bocha de helado</p>
-                <h3>Platos de madrugada:</h3>
+                <h3>Plato Principal (DIENTE LIBRE):</h3>
                 <ul>
-                    <li>Pizza a la piedra</li>
-                    <li>Empanadas fritas</li>
-                    <li>Choripanes</li>
+                    <li>Asado criollo compuesto por secuencia de chorizos y morcillas bombón, costilla de ternera cortada ancha, vacío y matambre, acompañados por una deliciosa criolla</li>
+                </ul>
+                <h3>Acompañamientos:</h3>
+                <ul>
+                    <li>Papas fritas</li>
+                    <li>Ensalada de lechuga, tomate y huevo duro</li>
+                    <li>Ensalada de zanahoria y repollo</li>
                 </ul>
                 <button onclick="cerrarMenu()">Cerrar</button>
             </div>
@@ -256,28 +222,12 @@
         <section class="value-info">
             <h2>Valores de la tarjeta</h2>
             <p>Niños entre 0 y 4 años, Sin costo.</p>
-             <p>Menores entre 4 años y 10 años $27.500.</p>
-             <p>Mayores $55.000.</p>
-        </section>
-
-        <section class="confirmation">
-            <h2>Confirmación de Asistencia</h2>
-            <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScY2buKH2HNPn2fMNmuSQzQtCK9OG6GOBKJS75u2EtFlzcrmg/viewform?usp=header'">Confirmar mi Asistencia</button>
-            <p>Recuerda abonar tu tarjeta y enviar el comprobante a  Juli +54 9 3574408373 o Santi +54 9 3574418250 </p>
-        </section>
-
-        <section class="gift">
-            <h2>Si quieres hacer un regalo</h2>
-            <p>Podés hacer un depósito a nuestra cuenta bancaria. ¡Gracias por acompañarnos!</p>
-            <p>Julieta Rocio Balbo</p>
-            <p>CVU: 0000003100071390584838</p>
-            <p>Alias: Boda.Santi.Juli</p>
-            </p>CUIT/CUIL: 27404175578</p>
-            <p>Mercado Pago</p>
+            <p>Niños entre 5 y 10 años, 50% del costo.</p>
+            <p>Adultos, Costo completo.</p>
         </section>
 
         <section>
-            <img src="https://github.com/Juli-97/Boda-Santi-y-Juli/blob/main/DSC-53.jpg" alt="Foto Final" style="width: 100%; margin-top: 20px; border-radius: 10px;">
+            <img src="https://raw.githubusercontent.com/Juli-97/Boda-Santi-y-Juli/main/DSC-53.jpg" alt="Foto Final" style="width: 100%; margin-top: 20px; border-radius: 10px;">
         </section>
     </div>
 
